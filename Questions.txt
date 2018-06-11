@@ -35,3 +35,74 @@ B) Exception at runtime at line n1
 C) 99
 D) 0
 
+3) given
+
+  class Y {
+    static String sayHi() { return "Y-Hello"; }
+    String sayHi2() { return "Y-Hello2"; }
+  }
+
+  class Z extends Y {
+    static String sayHi() { return "Z-Hello"; }
+    String sayHi2() { return "Z-Hello2"; }
+  }
+
+and:
+    Y y = new Z();
+    System.out.println(y.sayHi() + ", " +y.sayHi2());
+
+What is the result?
+    A) Y-Hello, Y-Hello2
+    B) Y-Hello, Z-Hello2
+    C) Z-Hello, Z-Hello2
+    D) Z-Hello, Y-Hello2
+    E) Compilation fails
+
+
+
+and:
+    Y y = new Z();
+    System.out.println(y.sayHi() + ", " +y.sayHi2());
+
+    What is the result?
+    A) Y-Hello, Y-Hello2
+    B) Y-Hello, Z-Hello2
+    C) Z-Hello, Z-Hello2
+    D) Z-Hello, Y-Hello2
+    E) Compilation fails
+
+4) Given
+public class X {
+  protected void doStuff() {}
+}
+and:
+public class A extends X {
+  void doStuff() {}
+}
+and:
+public class B extends X {
+  public void doStuff() {}
+}
+and:
+public class C extends X {
+  private void doStuff() {}
+}
+which compile?
+
+5) Given
+public class X {
+  public void doStuff() {}
+}
+and:
+public class A extends X {
+  void doStuff() {}
+}
+and:
+public class B extends X {
+  protected void doStuff() {}
+}
+and:
+public class C extends X {
+  private void doStuff() {}
+}
+which compile?
