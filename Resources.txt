@@ -5,7 +5,7 @@ simon@dancingcloudservices.com
 Resources:
  - recordings of this class
 
- - github--all the code, diagrams, etc. https://github.com/SimonHGR/SafariOCAStudyMay
+ - github--all the code, diagrams, etc. https://github.com/SimonHGR/SafariOCAStudyJune2018
 
  - Safari (Pearson) OCA Study guide. 19 hours of video addressing all the objectives of the Associate exam
 https://www.safaribooksonline.com/library/view/oca-java-se/9780134427201/

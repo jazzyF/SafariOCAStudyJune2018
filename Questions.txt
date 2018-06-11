@@ -1,0 +1,37 @@
+1) Given
+
+class X {
+  int a = 99;
+  static void showA(X x) {
+    sop("value of a is " + x.a);
+  }
+}
+and
+X myX = new X();
+X.showA(myX);
+
+what is the result?
+A) Compilation fails
+B) Exception at runtime
+C) value of a is 0
+D) value of a is 99
+
+2) Given
+
+class X {
+  static int x = 99;
+}
+
+and:
+
+X myX = new X();
+X yourX = new X();
+myX.x = 0; // line n1
+sop(yourX.x);
+
+What is the result?
+A) Compilation fails at line n1
+B) Exception at runtime at line n1
+C) 99
+D) 0
+
