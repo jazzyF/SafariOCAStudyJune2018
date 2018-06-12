@@ -179,13 +179,86 @@ C) Compilation fails
 
 and
 
-P p = ...;
-C c = (C)p;
+P p = if... "new C();" // could never succeed, not allowed...
+C c = (C)p; // therefore this couldn't possibly work! Compiler rejects it.
 
 What is the result?
 A) Compiles and runs
 B) Fails at runtime
 C) Compilation fails
 
+10) Given
+abstract class X {
+  public abstract void doStuff();
+}
 
+class Y extends X {}
+X x = new Y();
 
+What is the result:
+A) All good
+B) construction of Y fails
+C) Declaration of Y fails
+D) Assignment to X x fails
+
+10) Given
+interface X {
+  /* public abstract */ void doStuff();
+}
+
+class Y implements X {}
+X x = new Y();
+
+What is the result:
+A) All good
+B) construction of Y fails
+C) Declaration of Y fails
+D) Assignment to X x fails
+
+11) Given
+interface X {
+  void doStuff();
+}
+
+abstract class Y implements X {}
+X x = new Y();
+
+What is the result:
+A) All good
+B) construction of Y fails
+C) Declaration of Y fails
+D) Assignment to X x fails
+
+12) 
+  class Q26Base {
+    int x = 99;
+    Q26Base(int x){ System.out.println("in base constructor x is " + x); }
+  }
+  class Q26Sub extends Q26Base {
+    Q26Sub(int x) {
+      System.out.println("in sub constructor, x is " + x);
+    }
+  }
+    
+given a call to:
+    new Q26Sub(4)
+
+    What is the result?
+    A) in base constructor x is 4
+       in sub constructor, x is 4
+    B) in base constructor x is 99
+       in sub constructor, x is 4
+    C) Compilation fails
+    D) An exception is thrown
+
+13) Given
+public class X {
+  public X(int x) {}
+}
+
+and
+X x = new X();
+What is the result?
+A) success
+B) Runtime error
+C) Compile fails
