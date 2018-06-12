@@ -106,3 +106,59 @@ public class C extends X {
   private void doStuff() {}
 }
 which compile?
+
+6) Given:
+
+try {
+ // .. stuff that might break
+} catch (IOException ioe) {
+ // handle it...
+} catch (... e) {
+ //
+}
+
+Which may be added at ...?
+A) Throwable
+B) Exception
+C) RuntimeException
+D) FileNotFoundException
+
+7) Given
+public class X {
+  public void doStuff() throws IOException {}
+}
+and:
+public class A extends X {
+  public void doStuff() throws FileNotFoundException {}
+}
+and:
+public class B extends X {
+  public void doStuff() throws RuntimeException {}
+}
+and:
+public class C extends X {
+  public void doStuff() {}
+}
+which compile?
+
+8) Given
+public class X {
+  public CharSequence doStuff() { ... }
+}
+and:
+public class A extends X {
+  public String doStuff() { ... }
+}
+and:
+public class B extends X {
+  public StringBuilder doStuff() { ... }
+}
+and:
+public class C extends X {
+  public LocalDate doStuff() { ... }
+}
+and:
+public class D extends X {
+  public Object doStuff() { ... }
+}
+which compile?
