@@ -236,6 +236,7 @@ D) Assignment to X x fails
   }
   class Q26Sub extends Q26Base {
     Q26Sub(int x) {
+      //super();// implicit call fails! no Q26Base() no arg constructor...
       System.out.println("in sub constructor, x is " + x);
     }
   }
