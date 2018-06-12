@@ -162,3 +162,30 @@ public class D extends X {
   public Object doStuff() { ... }
 }
 which compile?
+
+9) Given P1, P2, and C1
+
+and
+
+P2 p2 = new P2();
+C c = (C)p2;
+
+What is the result?
+A) Compiles and runs
+B) Fails at runtime
+C) Compilation fails
+
+9) Given P, PC, and C
+
+and
+
+P p = ...;
+C c = (C)p;
+
+What is the result?
+A) Compiles and runs
+B) Fails at runtime
+C) Compilation fails
+
+
+

@@ -12,10 +12,10 @@ class B extends X {
   public StringBuilder doStuff() { return null; }
 }
 class C extends X {
-  public LocalDate doStuff() { return null; }
+//  public LocalDate doStuff() { return null; }
 }
 class D extends X {
-  public Object doStuff() { return null; }
+//  public Object doStuff() { return null; }
 }
 public class Ex1 {
 }

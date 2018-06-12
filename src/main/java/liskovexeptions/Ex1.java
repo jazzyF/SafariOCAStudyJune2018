@@ -20,7 +20,7 @@ class C extends X {
 }
 
 class D extends X {
-  public void doStuff() throws Exception {}
+//  public void doStuff() throws Exception {}
 }
 public class Ex1 {
 }
