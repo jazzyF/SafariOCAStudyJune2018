@@ -13,7 +13,7 @@ class Q26Sub extends Q26Base {
     this(99); // passes control across.
     System.out.println("hello");
   }
-  
+
   Q26Sub(int x) {
 //    super();// implicit call fails! no Q26Base() no arg constructor...
     super(x + 13);
