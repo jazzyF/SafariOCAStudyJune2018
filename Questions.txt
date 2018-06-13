@@ -263,3 +263,69 @@ What is the result?
 A) success
 B) Runtime error
 C) Compile fails
+
+14) given:
+
+public void q11A(int x) {
+    x = x + 1;
+}
+
+int x = 99;
+q11A(x);
+System.out.println(x);
+
+What is the result?
+    A) 99
+    B) 100
+    C) An error
+
+15) public void q12A(StringBuilder x) {
+    x.append(" world");
+  }
+
+and:
+    StringBuilder x = new StringBuilder("Hello");
+    q12A(x);
+    System.out.println(x);
+    
+What is the result?
+    A) Hello
+    B) Hello world
+    C)  world
+    D) An error
+
+16)
+Which compile?
+A)
+s -> s.getGrade() > 3; // NO CONTEXT
+interface Blah {
+  boolean wiffle(Student s);
+}
+(Student s) -> s.getGrade() > 3;
+
+B)
+Predicate<String> ps = s -> s.length();
+                       ^ Student yay!
+                      ^ method is test, of Predicate<String>
+                            ----------  ---> { return s.length(); }
+                                                        ^ int
+                     test method must return *boolean*
+
+C)
+public Predicate<String> getPred() {
+  return s -> {
+    System.out.println("testing " + s);
+//    return s.length() > 3 // missing semicolon
+    return s.length() > 3;
+  };
+}
+
+D)
+Predicate<String> ps = (String s, String t) -> s.length() > t.length(); // BAD
+BiPredicate<String, String> ps = (String s, String t) -> s.length() > t.length(); // GOOD
+
+E)
+public void useTest(Predicate<String> ps) {}
+...
+useTest(s -> s.length() > 3;); //  EXCESS semicolon
+                           ^ BAD!!
